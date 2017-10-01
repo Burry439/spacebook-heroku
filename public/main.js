@@ -52,7 +52,7 @@ function addPost(newPost) {
       url : '/posts/'+ posts[index]._id,
       method : 'DELETE',
       success : function(result){
-        console.log(result)
+        // console.log(result)
        posts.splice(index, 1);
         _renderPosts();
       }
@@ -67,7 +67,7 @@ function addPost(newPost) {
       data : {text : newComment.text , user : newComment.user}, 
       success : function(data){      
        posts[postIndex].comments.push(newComment);
-       console.log(posts)
+      //  console.log(posts)
        getPosts()
         
       }
@@ -94,7 +94,7 @@ function getPosts(){
     url: 'posts',
     success: function(data){   
      posts = data  
-     console.log(data)
+    //  console.log(data)
      _renderPosts()
     },
     error: function(err){

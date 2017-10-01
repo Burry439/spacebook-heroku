@@ -23,8 +23,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // 1) to handle getting all posts and their comments
 app.get('/posts', function(req, res){
+  console.log(1);
   Post.find(function(err, result){
-    if(err){
+  console.log(2);
+  console.log(err);
+  if(err){
      throw (err)
     }else{    
       
