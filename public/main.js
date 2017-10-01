@@ -118,7 +118,7 @@ var app = SpacebookApp();
 
 
 $('#addpost').on('click', function() {
-   console.log('hi')
+  //  console.log('hi')
   var $input = $("#postText");
   if ($input.val() === "") {
     alert("Please enter text!");
